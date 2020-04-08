@@ -56,7 +56,7 @@ int main() {
 
   // normal priority thread for other events
 
-  Thread eventThread(osPriorityNormal);
+  Thread eventThread(osPriorityHigh);
 
   eventThread.start(callback(&eventQueue, &EventQueue::dispatch_forever));
 
